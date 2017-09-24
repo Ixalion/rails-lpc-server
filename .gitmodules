@@ -1,0 +1,3 @@
+[submodule "spritesheet"]
+	path = spritesheet
+	url = https://github.com/jrconway3/Universal-LPC-spritesheet.git
