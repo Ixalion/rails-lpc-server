@@ -41,6 +41,8 @@ gem 'cocoon'
 gem 'pg_search'
 gem 'enum_help'
 
+gem 'oily_png'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
