@@ -13,7 +13,7 @@ module SpritesheetGenerator
   def self.generate_body_filelist(options={})
     array = Array.new
 
-    unless [:male, :female].include? options[:sex]
+    unless [:male, :female].include? options[:sex].to_sym
       raise "generate_body_filelist sex of '#{options[:sex]}' is invalid"
     end
 

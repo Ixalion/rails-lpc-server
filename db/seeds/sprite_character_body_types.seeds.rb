@@ -3,18 +3,19 @@ require "generate/helper"
 
 require "tempfile"
 
-Sprite::Character::BodyType::sexes.each do |sex|
-  Sprite::Character::BodyType::bodies.each do |body|
-    Sprite::Character::BodyType::noses.each do |nose|
-      Sprite::Character::BodyType::eyes.each do |eyes|
-        Sprite::Character::BodyType::ears.each do |ears|
-          body_type = Sprite::Character::BodyType.first_or_create(
+Sprite::Character::BodyType::sexes.keys.each do |sex|
+  Sprite::Character::BodyType::bodies.keys.each do |body|
+    Sprite::Character::BodyType::noses.keys.each do |nose|
+      Sprite::Character::BodyType::eyes.keys.each do |eyes|
+        Sprite::Character::BodyType::ears.keys.each do |ears|
+          body_type = Sprite::Character::BodyType.find_or_create_by(
             sex: sex,
             body: body,
             nose: nose,
             eyes: eyes,
             ears: ears
           )
+
 
           if body_type.tilesheet.nil?
             file_list = SpritesheetGenerator.body_filelist_from_body_type(body_type)
@@ -24,10 +25,10 @@ Sprite::Character::BodyType::sexes.each do |sex|
             image.save(tfile.path)
 
             tilesheet = Sprite::Tilesheet.new(
-              width: 32,
-              height: 32
+              tile_width: 32,
+              tile_height: 32
             )
-            tilesheet.avatar = tfile.open
+            tilesheet.file = tfile.open
 
             tilesheet.save
 
