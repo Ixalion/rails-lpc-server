@@ -1,24 +1,14 @@
-# README
+# Rails LPC Server
+This is an API accessible rails 5 server for generating and serving LPC sprite-sheets Edit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This is primarily being built as a baseline for tileserver to be used in a game
+that I am currently working on. However this repo contains the base rails server
+that contains the code needed to store, serve, and access the tilesheets is
+being made open source so others may use it in their projects.
 
-Things you may want to cover:
+For the time being I am not intending on making the rest of application as
+open-source. As such I will not be accepting contributions to this project
+as I want to maintain sole copyright.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# AS SUCH PULL REQUESTS WILL BE IGNORED. IF YOU WANT TO CONTRIBUTE FORK THIS REPO.

@@ -1,11 +1,14 @@
 class Sprite::Character::BodyType < ApplicationRecord
 
   has_one   :tilesheet_polymorphics,
-            polymorphic: true,
+            as: :tilesheetable,
+            class_name: "Sprite::TilesheetPolymorphic",
             dependent: :destroy
 
   has_one   :tilesheet,
-            through: :tilesheet_polymorphics
+            through: :tilesheet_polymorphics,
+            class_name: "Sprite::Tilesheet",
+            source: :sprite_tilesheet
 
 
   enum sex: [
