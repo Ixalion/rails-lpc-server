@@ -4,7 +4,7 @@ module SpritesheetGenerator
 
   # Structure:
   # options = {
-  #   sex: Symbol, # {:male | :female}
+  #   sex: Symbol,  # {:male | :female}
   #   body: Symbol, # e.g. :light
   #   eyes: Symbol, # e.g. :green
   #   ears: Symbol, # e.g. :bigears
