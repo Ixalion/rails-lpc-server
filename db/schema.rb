@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925001310) do
+ActiveRecord::Schema.define(version: 20170925220311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20170925001310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sex", "body", "eyes", "ears", "nose"], name: "sprite_character_body_types_uniqueness_index", unique: true
+  end
+
+  create_table "sprite_character_hair_color_palettes", force: :cascade do |t|
+    t.string "name"
+    t.integer "very_light", null: false
+    t.integer "light", null: false
+    t.integer "medium_light", null: false
+    t.integer "medium_dark", null: false
+    t.integer "medium_dark_transparent", null: false
+    t.integer "dark", null: false
+    t.integer "very_dark", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_sprite_character_hair_color_palettes_on_name", unique: true
+    t.index ["very_light", "light", "medium_light", "medium_dark", "medium_dark_transparent", "dark", "very_dark"], name: "sprite_character_hair_color_palettes_uniqueness_index", unique: true
   end
 
   create_table "sprite_tilesheet_polymorphics", force: :cascade do |t|
