@@ -11,4 +11,4 @@ For the time being I am not intending on making the rest of application as
 open-source. As such I will not be accepting contributions to this project
 as I want to maintain sole copyright.
 
-# AS SUCH PULL REQUESTS WILL BE IGNORED. IF YOU WANT TO CONTRIBUTE FORK THIS REPO.
+# AS SUCH PULL REQUESTS WILL BE IGNORED. IF YOU WANT TO DEVELOP ON THIS APPLICATION YOU WILL NEED TO CLONE THIS REPO.
