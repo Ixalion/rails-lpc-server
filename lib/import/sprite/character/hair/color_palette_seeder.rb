@@ -1,4 +1,6 @@
-class Sprite::Character::Hair::ColorPaletteSeeder
+require "import/base_seeder"
+
+class Sprite::Character::Hair::ColorPaletteSeeder < BaseSeeder
   using RubyExt
 
   def find_color_option(template_value)
