@@ -2,12 +2,10 @@ class CreateSpriteCharacterBodyTypes < ActiveRecord::Migration[5.1]
   def change
     create_table :sprite_character_body_types do |t|
       t.integer :sex, null: false
-      t.integer :body
-      t.integer :eyes
-      t.integer :ears
-      t.integer :nose
-      t.integer :facial_type
-      t.integer :facial_color
+      t.integer :body, null: false
+      t.integer :eyes, null: false
+      t.integer :ears, null: false
+      t.integer :nose, null: false
 
       t.timestamps
     end
@@ -19,9 +17,7 @@ class CreateSpriteCharacterBodyTypes < ActiveRecord::Migration[5.1]
         :body,
         :eyes,
         :ears,
-        :nose,
-        :facial_type,
-        :facial_color
+        :nose
       ],
       unique: true,
       name: :sprite_character_body_types_uniqueness_index

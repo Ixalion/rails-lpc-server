@@ -1,14 +1,16 @@
-SPRITESHEET_DIR = File.join(Rails.root, "spritesheet")
+module SpritesheetGenerator
+  SPRITESHEET_DIR = File.join(Rails.root, "spritesheet")
 
+  def self.merge_files(files)
+    combined_image = ChunkyPNG::Image.from_file(files.first)
 
-def merge_files(files)
-  combined_image = ChunkyPNG::Image.from_file(files.first)
+    files[1..-1].each do |file|
+      img = ChunkyPNG::Image.from_file(file)
 
-  files[1..-1].each do |file|
-    img = ChunkyPNG::Image.from_file(file)
+      combined_image.compose(img)
+    end
 
-    combined_image.compose(img)
+    return combined_image
   end
 
-  return combined_image
 end

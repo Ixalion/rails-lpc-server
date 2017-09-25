@@ -41,6 +41,7 @@ gem 'cocoon'
 gem 'pg_search'
 gem 'enum_help'
 gem 'carrierwave'
+gem 'seedbank'
 
 gem 'oily_png'
 

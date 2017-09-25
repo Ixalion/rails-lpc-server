@@ -14,7 +14,7 @@ class Sprite::Character::BodyType < ApplicationRecord
   enum sex: [
     :male,
     :female
-  ]
+  ], _prefix: true
 
   enum body: [
     :dark,
@@ -26,15 +26,17 @@ class Sprite::Character::BodyType < ApplicationRecord
     :red_orc,
     :tanned,
     :tanned2
-  ]
+  ], _prefix: true
 
   enum nose: [
+    :default,
     :bignose,
     :buttonnose,
     :straightnose
-  ]
+  ], _prefix: true
 
   enum eyes: [
+    :default,
     :blue,
     :brown,
     :gray,
@@ -43,18 +45,11 @@ class Sprite::Character::BodyType < ApplicationRecord
     :purple,
     :red,
     :yellow
-  ]
+  ], _prefix: true
 
   enum ears: [
+    :default,
     :bigears,
     :elvenears
-  ]
-
-  enum facial_type: [
-    :beard,
-    :bigstache,
-    :fiveoclock,
-    :frenchstache,
-    :mustache
-  ]
+  ], _prefix: true
 end

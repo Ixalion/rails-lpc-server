@@ -4,13 +4,16 @@ require "generate/helper"
 require "generate/body_filelist"
 
 
-# Structure:
-# options = {
-#   body: Hash, # See generate_body_filelist
-# }
-def generate_full_filelist(options={})
-  array = Array.new
+module SpritesheetGenerator
 
-  options[:body] ||= Hash.new
-  array.concat(generate_body_filelist(options[:body]))
+  # Structure:
+  # options = {
+  #   body: Hash, # See generate_body_filelist
+  # }
+  def self.generate_full_filelist(options={})
+    array = Array.new
+
+    options[:body] ||= Hash.new
+    array.concat(generate_body_filelist(options[:body]))
+  end
 end

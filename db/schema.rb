@@ -17,15 +17,13 @@ ActiveRecord::Schema.define(version: 20170925001310) do
 
   create_table "sprite_character_body_types", force: :cascade do |t|
     t.integer "sex", null: false
-    t.integer "body"
-    t.integer "eyes"
-    t.integer "ears"
-    t.integer "nose"
-    t.integer "facial_type"
-    t.integer "facial_color"
+    t.integer "body", null: false
+    t.integer "eyes", null: false
+    t.integer "ears", null: false
+    t.integer "nose", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["sex", "body", "eyes", "ears", "nose", "facial_type", "facial_color"], name: "sprite_character_body_types_uniqueness_index", unique: true
+    t.index ["sex", "body", "eyes", "ears", "nose"], name: "sprite_character_body_types_uniqueness_index", unique: true
   end
 
   create_table "sprite_tilesheet_polymorphics", force: :cascade do |t|
@@ -39,9 +37,9 @@ ActiveRecord::Schema.define(version: 20170925001310) do
   end
 
   create_table "sprite_tilesheets", force: :cascade do |t|
-    t.integer "tile_width"
-    t.integer "tile_height"
-    t.string "file"
+    t.integer "tile_width", null: false
+    t.integer "tile_height", null: false
+    t.string "file", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

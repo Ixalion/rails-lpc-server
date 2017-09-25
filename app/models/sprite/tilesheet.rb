@@ -4,4 +4,6 @@ class Sprite::Tilesheet < ApplicationRecord
 
   has_many  :tilesheetables,
             through: :tilesheet_polymorphics
+
+  mount_uploader :file, Sprite::TilesheetUploader
 end
