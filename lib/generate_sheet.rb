@@ -11,5 +11,6 @@ require "generate/body_filelist"
 def generate_full_filelist(options={})
   array = Array.new
 
+  options[:body] ||= Hash.new
   array.concat(generate_body_filelist(options[:body]))
 end

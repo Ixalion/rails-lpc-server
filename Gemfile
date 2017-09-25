@@ -40,6 +40,7 @@ gem 'simple_form'
 gem 'cocoon'
 gem 'pg_search'
 gem 'enum_help'
+gem 'carrierwave'
 
 gem 'oily_png'
 

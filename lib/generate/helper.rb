@@ -7,7 +7,7 @@ def merge_files(files)
   files[1..-1].each do |file|
     img = ChunkyPNG::Image.from_file(file)
 
-    combined_image.combine(img)
+    combined_image.compose(img)
   end
 
   return combined_image
