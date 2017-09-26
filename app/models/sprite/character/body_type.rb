@@ -1,5 +1,4 @@
 class Sprite::Character::BodyType < ApplicationRecord
-
   has_one   :tilesheet_polymorphics,
             as: :tilesheetable,
             class_name: "Sprite::TilesheetPolymorphic",
